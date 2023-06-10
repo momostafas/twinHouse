@@ -1336,21 +1336,21 @@ border-radius: 25px;" class="wpcf7" id="wpcf7-f5-o2" lang="en-US" dir="ltr">
 
             var fileURL = 'content-1.txt';
 
-fetch(fileURL)
-    .then(function(response) {
-        if (response.ok) {
-            return response.text();
-        } else {
-            throw new Error('Error loading file.');
-        }
-    })
-    .then(function(fileContent) {
-        console.log('text', fileContent);
+            fetch(fileURL)
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.text();
+                    } else {
+                        throw new Error('Error loading file.');
+                    }
+                })
+                .then(function (fileContent) {
+                    console.log('text', fileContent);
 
-    })
-    .catch(function(error) {
-        console.log(error.message);
-    });
+                })
+                .catch(function (error) {
+                    console.log(error.message);
+                });
         });
     </script>
     <script type='text/javascript' src='wp-includes/js/hoverIntent.minc245.js?ver=1.8.1'></script>
