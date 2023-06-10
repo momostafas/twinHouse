@@ -737,7 +737,7 @@
 
         .fixed-bottom i {
             font-size: 50px;
-            margin-top:20px;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
     </style>
@@ -895,7 +895,8 @@
                                     </div>
                                     <div class="elementor-element elementor-element-66c8fff elementor-column elementor-col-33 elementor-top-column"
                                         data-id="66c8fff" data-element_type="column">
-                                        <div class="elementor-column-wrap  elementor-element-populated" style="padding-bottom: 0;">
+                                        <div class="elementor-column-wrap  elementor-element-populated"
+                                            style="padding-bottom: 0;">
                                             <div class="elementor-widget-wrap">
                                                 <div class="elementor-element elementor-element-79bb156 elementor-widget elementor-widget-heading"
                                                     data-id="79bb156" data-element_type="widget"
@@ -1194,8 +1195,8 @@
     </div><!-- end ssd-main-content -->
 
     <div class="fixed-bottom">
-        <a href="https://wa.me/+201550626419"  target="_blank">
-            <img src="./wp-content/uploads/2019/twin house/whatsapp.png"  width="50">
+        <a href="https://wa.me/+201550626419" target="_blank">
+            <img src="./wp-content/uploads/2019/twin house/whatsapp.png" width="50">
         </a>
         <br>
         <a href="tel:+201550626419">
@@ -1332,6 +1333,24 @@ border-radius: 25px;" class="wpcf7" id="wpcf7-f5-o2" lang="en-US" dir="ltr">
                 "firstDay": 1,
                 "isRTL": false
             });
+
+            var fileURL = 'content-1.txt';
+
+fetch(fileURL)
+    .then(function(response) {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error('Error loading file.');
+        }
+    })
+    .then(function(fileContent) {
+        console.log('text', fileContent);
+
+    })
+    .catch(function(error) {
+        console.log(error.message);
+    });
         });
     </script>
     <script type='text/javascript' src='wp-includes/js/hoverIntent.minc245.js?ver=1.8.1'></script>
