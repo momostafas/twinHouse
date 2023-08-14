@@ -760,6 +760,86 @@
             color: #1c447f;
 
         }
+
+        @media (min-width: 1024px) {
+            .tablet-show {
+                display: none;
+            }
+
+            .desktop-show {
+                display: block;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .tablet-show {
+                display: block;
+            }
+
+            .desktop-show {
+                display: none;
+            }
+        }
+
+        .slider-container {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .slider-button {
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .slider-button.left {
+            left: 10px;
+        }
+
+        .slider-button.right {
+            right: 10px;
+        }
+
+        .indicators {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: gray;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background-color: black;
+        }
     </style>
     <link rel='stylesheet' id='google-fonts-1-css'
         href='https://fonts.googleapis.com/css?family=Palanquin%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.3.14'
@@ -776,14 +856,7 @@
         src='wp-content/plugins/revslider/public/assets/js/revolution.tools.minf049.js?ver=6.0'></script>
     <script type='text/javascript'
         src='wp-content/plugins/revslider/public/assets/js/rs6.min6fb3.js?ver=6.1.3'></script>
-    <script type='text/javascript' src='wp-content/themes/skytower/assets/js/modernizr5152.js?ver=1.0'></script>
-    <script type='text/javascript' src='wp-content/themes/skytower/assets/js/select2.full.min5152.js?ver=1.0'></script>
-    <link rel='https://api.w.org/' href='wp-json/index.html' />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
-    <meta name="generator" content="WordPress 5.3.14" />
-    <link rel="canonical" href="index.html" />
-    <link rel='shortlink' href='index.html' />
+
     <link rel="alternate" type="application/json+oembed"
         href="wp-json/oembed/1.0/embedf2eb.json?url=http%3A%2F%2Fsubsolardesigns.com%2Fskytower%2F" />
     <link rel="alternate" type="text/xml+oembed"
@@ -898,86 +971,30 @@
 
 
                         <section
-                            class="elementor-element elementor-element-1441aad elementor-section-full_width elementor-section-height-min-height elementor-section-content-middle elementor-reverse-tablet elementor-reverse-mobile elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section"
-                            data-id="1441aad" data-element_type="section">
+                            class="elementor-element container-fluid elementor-element-1441aad elementor-section-full_width elementor-section-height-min-height elementor-section-content-middle elementor-reverse-tablet elementor-reverse-mobile elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section"
+                            data-id="1441aad" style="margin-top: 20px;" data-element_type="section">
                             <div class="elementor-container elementor-column-gap-no">
                                 <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-0f040e0 elementor-column elementor-col-50 elementor-top-column"
-                                        data-id="0f040e0" data-element_type="row">
-                                        <div class="elementor-column-wrap  elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-5d82188 elementor-arrows-position-inside elementor-widget elementor-widget-image-carousel"
-                                                    data-id="5d82188" data-element_type="widget"
-                                                    data-settings="{&quot;navigation&quot;:&quot;arrows&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;direction&quot;:&quot;ltr&quot;}"
-                                                    data-widget_type="image-carousel.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-image-carousel-wrapper swiper-container"
-                                                            dir="ltr">
-                                                            <div class="elementor-image-carousel swiper-wrapper">
-                                                                <div class="swiper-slide">
-                                                                    <figure class="swiper-slide-inner"><img
-                                                                            class="swiper-slide-image"
-                                                                            src="./coronado/2.jpg"
-                                                                            alt="592a2c85302995.5d77d5d8e49c6" />
-                                                                    </figure>
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                                    <figure class="swiper-slide-inner"><img
-                                                                            class="swiper-slide-image"
-                                                                            src="./coronado/3.jpg"
-                                                                            alt="592a2c85302995.5d77d5d8e49c6" />
-                                                                    </figure>
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                                    <figure class="swiper-slide-inner"><img
-                                                                            class="swiper-slide-image"
-                                                                            src="./coronado/4.jpg"
-                                                                            alt="592a2c85302995.5d77d5d8e49c6" />
-                                                                    </figure>
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                                    <figure class="swiper-slide-inner"><img
-                                                                            class="swiper-slide-image"
-                                                                            src="./coronado/5.jpg"
-                                                                            alt="592a2c85302995.5d77d5d8e49c6" />
-                                                                    </figure>
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                                    <figure class="swiper-slide-inner"><img
-                                                                            class="swiper-slide-image"
-                                                                            src="./coronado/6.jpg"
-                                                                            alt="592a2c85302995.5d77d5d8e49c6" />
-                                                                    </figure>
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                                    <figure class="swiper-slide-inner"><img
-                                                                            class="swiper-slide-image"
-                                                                            src="./coronado/7.jpg"
-                                                                            alt="592a2c85302995.5d77d5d8e49c6" />
-                                                                    </figure>
-                                                                </div>
 
+                                    <div class="elementor-element elementor-element-6c6c592 elementor-column elementor-col-33 elementor-top-column"
+                                        data-id="6c6c592" data-element_type="column">                                        <div class="slider-container">
+                                            <div class="slider">
+                                                <div class="slide"><img src="./coronado/3.jpg" alt="Slide 2"></div>
+                                                <div class="slide"><img src="./coronado/4.jpg" alt="Slide 2"></div>
+                                                <div class="slide"><img src="./coronado/5.jpg" alt="Slide 2"></div>
+                                                <div class="slide"><img src="./coronado/6.jpg" alt="Slide 2"></div>
+                                                <div class="slide"><img src="./coronado/7.jpg" alt="Slide 2"></div>
+                                                <!-- Add more slides as needed -->
 
-                                                            </div>
-                                                            <div
-                                                                class="elementor-swiper-button elementor-swiper-button-prev">
-                                                                <i class="eicon-chevron-left" aria-hidden="true"></i>
-                                                                <span class="elementor-screen-only">Previous</span>
-                                                            </div>
-                                                            <div
-                                                                class="elementor-swiper-button elementor-swiper-button-next">
-                                                                <i class="eicon-chevron-right" aria-hidden="true"></i>
-                                                                <span class="elementor-screen-only">Next</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
+                                            <div class="indicators" id="dynamic-indicators">
+                                                <!-- Indicators will be generated here dynamically -->
+                                            </div>
+
                                         </div>
                                     </div>
-                                    <div class="elementor-element elementor-element-66c8fff elementor-column elementor-col-45 elementor-top-column"
-                                        data-id="66c8fff" data-element_type="column">
-                                        <div class="elementor-column-wrap  elementor-element-populated"
+                                    <div class="elementor-element elementor-element-6c6c592 elementor-column elementor-col-66 elementor-top-column" data-id="66c8fff" data-element_type="column">
+                                        <div class="elementor-column-wrap container"
                                             style="padding-bottom: 0;">
                                             <div class="elementor-widget-wrap">
                                                 <div class="elementor-element elementor-element-79bb156 elementor-widget elementor-widget-heading"
@@ -985,7 +1002,7 @@
                                                     style="margin-bottom: 0;" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
                                                         <h4 style="margin-bottom: 0;" id="ProjectDetailsTitle"
-                                                            class="elementor-heading-title text-center elementor-size-default">
+                                                            class="elementor-heading-title text-right elementor-size-default">
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -995,12 +1012,12 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-text-editor elementor-clearfix" style="text-align: right;
                                                         font-size: 24px;">
-                                                             <span id="testElement" style="font-size: 18px;">
+                                                            <span id="testElement" style="font-size: 18px;">
 
-                                                             </span>
+                                                            </span>
                                                             <ul id="ProjectDetailsList"
                                                                 style="direction: rtl; font-size: 20px;">
-                                                               
+
 
 
 
@@ -1018,46 +1035,83 @@
                         </section>
 
                         
-						<div dir="rtl" class="container ssd-single-post-comments">
-							<div class="ssd-comments-area" id="comments">
-
-
-								<div id="respond" class="comment-respond">
-									<h4 id="reply-title" class="comment-reply-title">Get in touch <small><a
-												rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond"
-												style="display:none;">Cancel Reply</a></small></h4>
-									<form action="http://subsolardesigns.com/skytower/wp-comments-post.php"
-										method="post" id="commentform" class="comment-form" novalidate>
-										<div class="row" style="direction: rtl;" dir="rtl">
-											<div class="comment-form-author  col-sm-12 col-md-4">
-												<p><label for="author"> الاسم</label><input id="author"
-														name="author" placeholder="Name" type="text" value="" size="30"
-														aria-required='true' /></p>
-											</div>
-											<div class="comment-form-email col-sm-12 col-md-4">
-												<p><label for="phone">الموبايل </label><input id="phone"
-														name="phone" placeholder="phone number" type="tel" value="" size="30"
-														aria-required='true' /></p>
-											</div>
-											<div class="comment-form-url col-sm-12 col-md-4">
-												<p><label for="job">الوظيفة</label><input id="job" name="job"
-														placeholder="Website" type="job" value="" size="30" /></p>
-											</div>
-										</div>
-										<p class="form-submit" style="float: left;"><input name="submit" type="submit" id="submit"
-												class="submit" value="Send" /> <input type='hidden'
-												name='comment_post_ID' value='1053' id='comment_post_ID' />
-											<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
-										</p>
-									</form>
-								</div><!-- #respond -->
-
-							</div> <!-- end ssd-comments-area -->
-						</div> <!-- end ssd-single-post-comments -->
-
 
                         <section
-                            dir="rtl"
+                            class="elementor-element elementor-element-585f82e elementor-section-content-middle elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+                            data-id="585f82e" style="margin-top: 35px;" data-element_type="section">
+                            <h4 class="text-center" style="margin-bottom: 25px">Get In Touch
+                            </h4>
+                            <div class="elementor-container elementor-column-gap-no">
+
+                                <div class="elementor-row">
+
+                                    <div class="container" style="margin-bottom: 0;">
+                                        <div role="form" style="    border: 4px solid #f3ba2c;
+                padding: 10px;
+                border-radius: 25px;" class="wpcf7" id="wpcf7-f5-o2" lang="en-US" dir="ltr">
+                                            <div class="screen-reader-response"></div>
+                                            <form style="direction: rtl;"
+                                                action="https://script.google.com/macros/s/AKfycbyXSnb287apunYFHv9hrBDBxT-IqGWzI4w5IBEUHaDbOExk5R9Fc5drEYltWiuIDDu3/exec"
+                                                method="POST" class="wpcf7-form" novalidate="novalidate" id="myForm">
+                                                <div style="display: none;">
+                                                    <input type="hidden" name="_wpcf7" value="5" />
+                                                    <input type="hidden" name="_wpcf7_version" value="5.1.6" />
+                                                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-o2" />
+                                                    <input type="hidden" name="_wpcf7_container_post" value="0" />
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6"><label>الأسم :<span
+                                                                class="wpcf7-form-control-wrap your-name"><input
+                                                                    name="name" style="border: 1px solid black;
+                                                        border-radius: 20px;
+                                                        margin-bottom: 15px;
+                                                        " type="text" name="your-name" value="" size="40"
+                                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                    aria-required="true" aria-invalid="false" /></span>
+                                                        </label></div>
+                                                    <div class="col-sm-6"><label>الموبايل : <span
+                                                                class="wpcf7-form-control-wrap your-subject"><input
+                                                                    name="phone" style="border: 1px solid black;
+                                                        border-radius: 20px;
+                                                        margin-bottom: 15px;
+                " type="mobile" name="mobile" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-name wpcf7-validates-as-required"
+                                                                    aria-required="true" aria-invalid="false" /></span>
+                                                        </label></div>
+                                                    <div class="col-sm-12"><label> الوظيفة : <span
+                                                                class="wpcf7-form-control-wrap your-subject"><input
+                                                                    name="job" style="border: 1px solid black;
+                                                        border-radius: 20px;
+                                                        margin-bottom: 15px;
+                " type="text" name="job" value="" size="40" class="wpcf7-form-control wpcf7-text"
+                                                                    aria-invalid="false" /></span>
+                                                        </label></div>
+                                                </div>
+                                                <div class="elementor-element elementor-element-8a8520a elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button"
+                                                    data-id="8a8520a" data-element_type="widget"
+                                                    data-widget_type="button.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="elementor-button-wrapper">
+                                                            <button class="blog-read-more btn btn-color"
+                                                                style="width: 100%; margin-top: 26px; border-radius: 20px; background: #1c447f"
+                                                                type="button" onclick="submitFormCoronado(event)">
+                                                                <span class="elementor-button-content-wrapper">
+                                                                    <span class="elementor-button-text">SEND</span>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="wpcf7-response-output wpcf7-display-none">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section dir="rtl"
                             class="elementor-element elementor-element-f91f8a7 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
                             data-id="f91f8a7" id="Project" data-element_type="section">
                             <div class="elementor-container elementor-column-gap-no">
@@ -1087,7 +1141,8 @@
                                                         <div class="elementor-text-editor elementor-clearfix">
                                                             <p>
                                                             <ul style="margin-right: -20px;" dir="rtl">
-                                                                يقع مشروع كورنادو - الساحل الشمالي في الكيلو 164 طريق
+                                                                يقع مشروع كورنادو - أحد أفضل شاليهات للبيع الساحل
+                                                                الشمالي في الكيلو 164 طريق
                                                                 اسكندرية مطروح:
 
                                                                 <li s>
@@ -1161,7 +1216,7 @@
                                         <p>
                                             <i class="fa-solid fa-umbrella-beach"></i>
                                         </p>
-                                        <span>شاظئ بطول 680 متر</span>
+                                        <span>شاطئ بطول 680 متر</span>
 
                                     </div>
                                     <div class="col-6 col-md-4 text-center">
@@ -1176,6 +1231,13 @@
                                             <i class="fa-solid fa-child-reaching"></i>
                                         </p>
                                         <span>Kids Area</span>
+                                    </div>
+
+                                    <div class="col-6 col-md-4 text-center">
+                                        <p>
+                                            <i class="fa-solid fa-hotel"></i>
+                                        </p>
+                                        <span>فندق 4 نجوم</span>
                                     </div>
                                 </div>
 
@@ -1217,7 +1279,7 @@ border-radius: 25px;" class="wpcf7" id="wpcf7-f5-o2" lang="en-US" dir="ltr">
                         <div class="screen-reader-response"></div>
                         <form style="direction: rtl;"
                             action="https://script.google.com/macros/s/AKfycbyXSnb287apunYFHv9hrBDBxT-IqGWzI4w5IBEUHaDbOExk5R9Fc5drEYltWiuIDDu3/exec"
-                            method="POST" method="post" class="wpcf7-form" novalidate="novalidate">
+                            method="POST" class="wpcf7-form" novalidate="novalidate" id="myForm">
                             <div style="display: none;">
                                 <input type="hidden" name="_wpcf7" value="5" />
                                 <input type="hidden" name="_wpcf7_version" value="5.1.6" />
@@ -1228,24 +1290,24 @@ border-radius: 25px;" class="wpcf7" id="wpcf7-f5-o2" lang="en-US" dir="ltr">
                             <div class="row">
                                 <div class="col-sm-6"><label>الأسم :<span
                                             class="wpcf7-form-control-wrap your-name"><input name="name" style="border: 1px solid black;
-                                        border-radius: 20px;
-                                        margin-bottom: 15px;
-                                        " type="text" name="your-name" value="" size="40"
+                                border-radius: 20px;
+                                margin-bottom: 15px;
+                                " type="text" name="your-name" value="" size="40"
                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                 aria-required="true" aria-invalid="false" /></span>
                                     </label></div>
                                 <div class="col-sm-6"><label>الموبايل : <span
                                             class="wpcf7-form-control-wrap your-subject"><input name="phone" style="border: 1px solid black;
-                                        border-radius: 20px;
-                                        margin-bottom: 15px;
+                                border-radius: 20px;
+                                margin-bottom: 15px;
 " type="mobile" name="mobile" value="" size="40"
                                                 class="wpcf7-form-control wpcf7-text wpcf7-name wpcf7-validates-as-required"
                                                 aria-required="true" aria-invalid="false" /></span>
                                     </label></div>
                                 <div class="col-sm-12"><label> الوظيفة : <span
                                             class="wpcf7-form-control-wrap your-subject"><input name="job" style="border: 1px solid black;
-                                        border-radius: 20px;
-                                        margin-bottom: 15px;
+                                border-radius: 20px;
+                                margin-bottom: 15px;
 " type="text" name="job" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span>
                                     </label></div>
                             </div>
@@ -1253,8 +1315,9 @@ border-radius: 25px;" class="wpcf7" id="wpcf7-f5-o2" lang="en-US" dir="ltr">
                                 data-id="8a8520a" data-element_type="widget" data-widget_type="button.default">
                                 <div class="elementor-widget-container">
                                     <div class="elementor-button-wrapper">
-                                        <button class="blog-read-more btn btn-color"" style=" width: 100%; margin-top:
-                                            26px; border-radius: 20px; background: #1c447f " role=" button">
+                                        <button class="blog-read-more btn btn-color"
+                                            style="width: 100%; margin-top: 26px; border-radius: 20px; background: #1c447f"
+                                            type="button" onclick="submitFormCoronado(event)">
                                             <span class="elementor-button-content-wrapper">
                                                 <span class="elementor-button-text">SEND</span>
                                             </span>
@@ -1345,6 +1408,70 @@ border-radius: 25px;" class="wpcf7" id="wpcf7-f5-o2" lang="en-US" dir="ltr">
                     console.log(error.message);
                 });
         });
+        function submitFormCoronado(e) {
+
+            // Prevent default form submission
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(document.getElementById("myForm"));
+
+            // AJAX request using fetch API
+            fetch("https://script.google.com/macros/s/AKfycbyXSnb287apunYFHv9hrBDBxT-IqGWzI4w5IBEUHaDbOExk5R9Fc5drEYltWiuIDDu3/exec", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    // Clear the form fields after successful submission
+                    document.getElementById("myForm").reset();
+                    alert("submitted!");
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+        }
+
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const indicatorsContainer = document.getElementById('dynamic-indicators');
+        let currentIndex = 0;
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateIndicators();
+        }
+
+        function updateIndicators() {
+            indicatorsContainer.innerHTML = ''; // Clear existing indicators
+
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.className = `indicator ${index === currentIndex ? 'active' : ''}`;
+                indicator.onclick = () => goToSlide(index);
+                indicatorsContainer.appendChild(indicator);
+            });
+        }
+
+        updateSlider(); // Initialize slider position
+
+        // Optionally, add automatic sliding:
+        setInterval(nextSlide, 5000); // Slide every 5 seconds
     </script>
     <script type='text/javascript' src='wp-includes/js/hoverIntent.minc245.js?ver=1.8.1'></script>
     <script type='text/javascript'>
