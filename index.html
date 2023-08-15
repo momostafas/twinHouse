@@ -756,7 +756,6 @@
 
         .ProjectDetailsListItemContent {
             font-weight: bold;
-            margin-left: 10px;
             color: #1c447f;
 
         }
@@ -782,64 +781,72 @@
         }
 
         .slider-container {
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: min-content;
+}
 
-        .slider {
-            display: flex;
-            transition: transform 0.3s ease-in-out;
-        }
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
 
-        .slide {
-            min-width: 100%;
-            position: relative;
-        }
+.slide {
+    flex: 0 0 100%;
+    position: relative;
+}
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-        .slider-button {
-            cursor: pointer;
-            font-size: 24px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-        }
+.indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+}
 
-        .slider-button.left {
-            left: 10px;
-        }
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
 
-        .slider-button.right {
-            right: 10px;
-        }
+.indicator.active {
+    background-color: black;
+}
+.slide-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 2;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.slider-button {
+    background: rgba(10,10,10,0.3);
+    color: grey;
+    border: none;
+    font-size: 111px;
+    height: 100px;
+}
+input {
+    padding-right: 10px;
+}
 
-        .indicators {
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            right: 0;
-        }
-
-        .indicator {
-            width: 10px;
-            height: 10px;
-            background-color: gray;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-
-        .indicator.active {
-            background-color: black;
-        }
     </style>
     <link rel='stylesheet' id='google-fonts-1-css'
         href='https://fonts.googleapis.com/css?family=Palanquin%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.3.14'
@@ -977,7 +984,8 @@
                                 <div class="elementor-row">
 
                                     <div class="elementor-element elementor-element-6c6c592 elementor-column elementor-col-33 elementor-top-column"
-                                        data-id="6c6c592" data-element_type="column">                                        <div class="slider-container">
+                                        data-id="6c6c592" data-element_type="column">
+                                        <div class="slider-container">
                                             <div class="slider">
                                                 <div class="slide"><img src="./coronado/3.jpg" alt="Slide 2"></div>
                                                 <div class="slide"><img src="./coronado/4.jpg" alt="Slide 2"></div>
@@ -987,15 +995,19 @@
                                                 <!-- Add more slides as needed -->
 
                                             </div>
+                                            <div class="slide-buttons">
+                                                <button class="slider-button left" onclick="prevSlide()">&#8249;</button>
+                                                <button class="slider-button right" onclick="nextSlide()">&#8250;</button>
+                                            </div>
                                             <div class="indicators" id="dynamic-indicators">
                                                 <!-- Indicators will be generated here dynamically -->
                                             </div>
 
                                         </div>
                                     </div>
-                                    <div class="elementor-element elementor-element-6c6c592 elementor-column elementor-col-66 elementor-top-column" data-id="66c8fff" data-element_type="column">
-                                        <div class="elementor-column-wrap container"
-                                            style="padding-bottom: 0;">
+                                    <div class="elementor-element elementor-element-6c6c592 elementor-column elementor-col-66 elementor-top-column"
+                                        data-id="66c8fff" data-element_type="column">
+                                        <div class="elementor-column-wrap container" style="padding-bottom: 0;">
                                             <div class="elementor-widget-wrap">
                                                 <div class="elementor-element elementor-element-79bb156 elementor-widget elementor-widget-heading"
                                                     data-id="79bb156" data-element_type="widget"
@@ -1034,7 +1046,7 @@
                             </div>
                         </section>
 
-                        
+
 
                         <section
                             class="elementor-element elementor-element-585f82e elementor-section-content-middle elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
@@ -1141,7 +1153,7 @@
                                                         <div class="elementor-text-editor elementor-clearfix">
                                                             <p>
                                                             <ul style="margin-right: -20px;" dir="rtl">
-                                                                يقع مشروع كورنادو - أحد أفضل شاليهات للبيع الساحل
+                                                                يقع مشروع كورونادو  - أحد أفضل شاليهات للبيع الساحل
                                                                 الشمالي في الكيلو 164 طريق
                                                                 اسكندرية مطروح:
 
@@ -1166,6 +1178,7 @@
                                         data-id="afd99ed" data-element_type="column">
                                         <div class="elementor-column-wrap">
                                             <div class="elementor-widget-wrap">
+                                                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3417.0948543706268!2d28.383158899999998!3d31.0792884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1460195237b4cc8f%3A0x7795038d2503dcdf!2sCoronado%20North%20Coast!5e0!3m2!1sen!2seg!4v1692003213902!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                                             </div>
                                         </div>
                                     </div>
